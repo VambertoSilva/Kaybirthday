@@ -1,5 +1,4 @@
 html {
-  box-sizing: border-box;
 }
 
 body {
@@ -14,7 +13,6 @@ body {
 .container {
   height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
   text-align: center;
   visibility: hidden;
@@ -26,6 +24,7 @@ body {
   position: absolute;
   right: 0;
   top: 20vh;
+  overflow-x: hidden;
 }
 
 .one {
@@ -41,7 +40,21 @@ body {
   font-size: 3rem;
 }
 
+.four {
+  display: flex;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
 .four .text-box {
+  width: 95vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-y: auto;
+}
+
+.text-box {
   border: 3px solid #aaa;
   border-radius: 5px;
   margin: 0 auto;
@@ -251,7 +264,7 @@ body {
     left: 0;
     position: absolute;
     right: 0;
-    top: 4vh;
+    top: 2vh;
   }
 }
 
@@ -269,11 +282,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .container {
-    width: 90%;
-  }
-
-  .four .text-box {
-    width: 90%;
+    width: 100vw;
   }
 
   .text-box .fake-btn {

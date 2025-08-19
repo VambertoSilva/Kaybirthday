@@ -107,7 +107,7 @@ const animationTimeline = () => {
       },
       0.05
     )
-    // .addPause()
+    .addPause()
     .to(
       ".fake-btn",
       0.1,
