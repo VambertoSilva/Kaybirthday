@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
@@ -64,9 +64,17 @@ body {
   border-radius: 3px;
   bottom: -50px;
   color: #fff;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   right: 5px;
+}
+
+.fake-btn {
+  z-index: 100;
+}
+
+.fake-btn:hover {
+  cursor: pointer;
 }
 
 .five p {
@@ -86,14 +94,15 @@ body {
   font-size: 4rem;
 }
 
-.idea-5 span, .idea-6 span, .wish-hbd span {
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
+.idea-6 span {
   font-size: 15rem;
 }
-
 
 .six {
   position: relative;
@@ -133,7 +142,8 @@ body {
   left: 30%;
 }
 
-.seven, .eight {
+.seven,
+.eight {
   height: 100vh;
   position: fixed;
   top: 0;
@@ -235,6 +245,13 @@ body {
 @media screen and (max-height: 800px) {
   .six .hat {
     left: 37%;
+  }
+
+  .container > div {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 4vh;
   }
 }
 

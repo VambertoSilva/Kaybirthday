@@ -107,6 +107,7 @@ const animationTimeline = () => {
       },
       0.05
     )
+    // .addPause()
     .to(
       ".fake-btn",
       0.1,
@@ -125,6 +126,7 @@ const animationTimeline = () => {
       },
       "+=1"
     )
+
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-2", 0.7, ideaTextTrans)
@@ -212,6 +214,7 @@ const animationTimeline = () => {
       {
         scale: 3.5,
         opacity: 0,
+        display: "none",
         x: 25,
         y: -25,
         rotationZ: -45,
@@ -272,6 +275,7 @@ const animationTimeline = () => {
         scale: 80,
         repeat: 3,
         repeatDelay: 1.4,
+        display: "none",
       },
       0.3
     )
@@ -289,10 +293,6 @@ const animationTimeline = () => {
       },
       "+=1"
     );
-
-  document.querySelector(".fake-btn").addEventListener("click", () => {
-    tl.play(); // retoma de onde parou
-  });
 
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
