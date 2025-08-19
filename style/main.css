@@ -1,4 +1,5 @@
 html {
+  box-sizing: border-box;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 .container {
   height: 100vh;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
   text-align: center;
   visibility: hidden;
@@ -24,7 +26,6 @@ body {
   position: absolute;
   right: 0;
   top: 20vh;
-  overflow-x: hidden;
 }
 
 .one {
@@ -40,20 +41,7 @@ body {
   font-size: 3rem;
 }
 
-.four {
-  display: flex;
-  width: 100vw;
-  box-sizing: border-box;
-}
-
 .four .text-box {
-  width: 95vw;
-  max-width: 100vw;
-  box-sizing: border-box;
-  white-space: normal;
-}
-
-.text-box {
   border: 3px solid #aaa;
   border-radius: 5px;
   margin: 0 auto;
@@ -79,14 +67,6 @@ body {
   padding: 0.5rem 1rem;
   position: absolute;
   right: 5px;
-}
-
-.fake-btn {
-  z-index: 100;
-}
-
-.fake-btn:hover {
-  cursor: pointer;
 }
 
 .five p {
@@ -258,13 +238,6 @@ body {
   .six .hat {
     left: 37%;
   }
-
-  .container > div {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 2vh;
-  }
 }
 
 @media screen and (max-height: 700px) {
@@ -279,9 +252,19 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .container > div {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 5vh;
+  }
   .container {
-    width: 100vw;
+    width: 90%;
+  }
+
+  .four .text-box {
+    width: 90%;
   }
 
   .text-box .fake-btn {
