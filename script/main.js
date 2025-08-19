@@ -290,6 +290,10 @@ const animationTimeline = () => {
       "+=1"
     );
 
+  document.querySelector(".fake-btn").addEventListener("click", () => {
+    tl.play(); // retoma de onde parou
+  });
+
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
